@@ -1,12 +1,9 @@
 
 <?php
 
-    $text = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione velit laudantium assumenda iusto omnis? Eum ratione fugit cupiditate aspernatur exercitationem nostrum assumenda ipsam recusandae perferendis autem, laboriosam cum nesciunt aut.';
+    $text = 'Marco va al mare con i suoi amici. Se i suoi amici non ci sono andrà con la sua ragazza al mare o in piscina';
 
     $length = strlen($text);
-
-
-
 
 ?>
 
@@ -18,3 +15,22 @@
 <div>
     <p>Il testo è formato da <?= $length ?> parole </p>
 </div>
+
+<?php
+    $bannedWord = 'amici';
+    
+    $newText = str_replace($bannedWord, '***',$text);
+
+    $newLength =strlen($newText);
+
+?>
+
+<div>
+    <?= $newText ?>
+</div>
+
+<div>
+    <p>Il testo è formato da <?= $newLength ?> parole </p>
+</div>
+
+
