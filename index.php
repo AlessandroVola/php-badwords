@@ -17,7 +17,11 @@
 </div>
 
 <?php
-    $bannedWord = 'amici';
+   
+
+    $bannedWord =  $_GET['word'];
+
+    echo $bannedWord;
     
     $newText = str_replace($bannedWord, '***',$text);
 
